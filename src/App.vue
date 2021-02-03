@@ -1,19 +1,20 @@
-// render ALL
-
 <template>
   <div id="app">
+    <Header msg='Kill all Robots' />
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Main msg="This is Salmon Cookies"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from './components/Main/Main.vue'
+import Header from './components/Header/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Main
   }
 }
 </script>
