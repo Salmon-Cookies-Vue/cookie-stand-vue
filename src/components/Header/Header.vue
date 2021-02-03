@@ -1,6 +1,7 @@
 <template>
   <div class="header">
     <h1>{{ msg }}</h1>
+    // todo add nav
   </div>
 </template>
 
