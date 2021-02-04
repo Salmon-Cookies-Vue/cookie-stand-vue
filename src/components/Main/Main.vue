@@ -14,6 +14,8 @@
 import Home from '../Home/Home.vue'
 import StoreData from '../Data/Data.vue'
 
+
+
 export default {
   name: 'Main',
   components: {

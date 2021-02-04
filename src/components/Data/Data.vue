@@ -1,12 +1,13 @@
 <template>
 <div>
   <div class="storeData">
-        <h2>About Our stores</h2>
-        <form>
-        <input v-model="location" placeholder="store Location">
-        <input v-model="MinCust" placeholder="Min customers">
-        <input v-model="MaxCust" placeholder="Max customers">
-        <input v-model="AvgSales" placeholder="Average cookie sales">
+    
+    <h2>About Our stores</h2>
+    <form>
+      <input v-model="location" placeholder="store Location" />
+      <input v-model="minCust" placeholder="Min customers" />
+      <input v-model="maxCust" placeholder="Max customers" />
+      <input v-model="avgSales" placeholder="Average cookie sales" />
 
         <button> submit</button>
         </form>
@@ -31,9 +32,9 @@
     </form>
     <table class="table mt-5">
       <thead>
-        <tr v-for="(storehours, i)": key="i" scope="col">
+        <tr v-for="hours in storehours" : v-bind:key="hours.message" scope="col">
           <th scope="col">Hours</th>
-          <td>{{ storehours[i] }}</td>
+          <td>{{ hours }}</td>
         </tr>
       </thead>
       <tbody>
@@ -72,12 +73,39 @@ name: "CookiesPerHour",
   },
 };
 </script>
+
+<script>
+export default {
   name: 'StoreData',
   props: {
-    
+    location: String,
+    minCust: Number,
+    maxCust: Number,
+    avgSales: Number,
+  },
+};
+</script>
+
+<script>
+import Store from './constructor.vue'
+
+export const storeMaker = {
+  
+  data: () => ({
+    store: new Store()
+  }),
+
+  methods: {
+    async createStore() {
+      Object.assign(this.store, new Store())
+    },
+
+    log() {
+      console.log()
+    }
   }
 }
-
+</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -92,7 +120,7 @@ ul {
   padding: 0;
 }
 li {
-  display: inl/ine-block;
+  display: inline-block;
   margin: 0 10px;
 }
 a {
