@@ -1,12 +1,12 @@
 <script>
-import R from "ramda"
+import * as R from "ramda"
 
 export default class Store {
   constructor(store = {}) {
-    this.location = R.is(string, store.location) ? location : "";
-    this.MinCust = R.is(number, store.MinCust) ? MinCust : 0;
-    this.MaxCust = R.is(number, store.MaxCust) ? MaxCust : 0;
-    this.AvgSales = R.is(number, store.AvgSales) ? AvgSales : 0;
+    this.location = R.is(String, store.location) ? location : "";
+    this.minCust = R.is(Number, store.minCust) ? minCust : 0;
+    this.maxCust = R.is(Number, store.maxCust) ? maxCust : 0;
+    this.avgSales = R.is(Number, store.avgSales) ? avgSales : 0;
   }
 
   getName() {
@@ -16,9 +16,9 @@ export default class Store {
   createStore() {
     return {
       location: this.location,
-      MinCust: this.MinCust,
-      MaxCust: this.MaxCust,
-      AvgSales: this.AvgSales,
+      minCust: this.minCust,
+      maxCust: this.maxCust,
+      avgSales: this.avgSales,
     }
   }
 
