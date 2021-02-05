@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+Vue.prototype.$log = console.log;
 Vue.config.productionTip = false
 
 new Vue({

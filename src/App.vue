@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header msg='This is Salmon Cookies' />
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img width="200" alt="Vue logo" src="./assets/salmon.jpg">
     <Main msg="This is Salmon Cookies"/>
     <Footer />
   </div>
