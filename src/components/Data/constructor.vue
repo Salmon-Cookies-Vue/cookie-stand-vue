@@ -13,6 +13,8 @@ export default class Store {
     return this.location;
   }
 
+  
+
   createStore() {
     return {
       location: this.location,
